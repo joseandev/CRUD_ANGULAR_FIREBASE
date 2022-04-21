@@ -1,0 +1,42 @@
+- Primeros creamos la BD en firebase
+
+- Luego, creamos el proyecto en angular.
+
+- En tercer lugar, instalamos bootstrap, el sdk de firebase y la libreria angular para manejar firebase. y agregamos bootstrap a angular.json
+
+	npm install bootstrap firebase @angular/fire.
+	Agregamso fontawesone a traves de cdn
+
+- Configuramos firebase
+
+En nuestro enviroment.ts, agregamos las credenciales de nuestra BD.
+
+- Realizamos imports de la configuracion y para el manejo de firestore. Tambien los agregamos al objeto imports e inicializamos firestore. Y tambien los dos objetos para el manejo del formulario.
+
+- Creamos una clase modelo
+
+	ng generate class post --type=model --skip-tests
+
+- Quitamos el modo estricto de angular13 en:
+
+	tsconfig.json>strict>false
+
+- Creacion del servicio
+
+	ng generate service post --skip-tests
+	
+- Importamos AngularFirestore y el modelo al servicio
+
+- Creamos en el servicio los metodos del CRUD
+
+Ahora se van a crear tres componentes: show, create, edit
+
+ng generate component ./components/show --skipTests=true
+ng generate component ./components/create --skipTests=true
+ng generate component ./components/edit --skipTests=true
+
+- Vamos al app-routing-module.ts y agregamos las rutas a nuestros componentes.
+
+- HTML + CSS en nuestro componente principal
+- CSS en el style principal
+- Estructura del componente show
